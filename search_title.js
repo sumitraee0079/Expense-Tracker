@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Expense_Title} from './table_expense';
 
 class App extends Component {
 
     state = {
+        Expense_Title = '',
         search : ""
     }
 
@@ -19,13 +19,13 @@ class App extends Component {
     render() {
 
         const {search} = this.state;
-        const expenseTitle = Expense_Title.filter( title =>{
+        const expenseTitle = {this.state.Expense_Title}.filter( title =>{
             return expenseTitle.toLowerCase().indexOf( search.toLowerCase() ) !== -1
         })
 
         return (
             <div>
-                <div className="container">
+                <div>
                     <div className="row">
                         <div className="col"></div>
                         <div className="col">
@@ -41,7 +41,6 @@ class App extends Component {
                         }
                     </div>
                 </div>
-            </main>
             </div>
         );
     }
