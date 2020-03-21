@@ -9,7 +9,7 @@ class Index extends Component {
       this.state = {expense: []};
     }
     componentDidMount(){
-      axios.get('http://localhost:4000/expense')
+      axios.get('http://localhost:3000/')
         .then(response => {
           this.setState({ expense: response.data });
         })
@@ -23,7 +23,7 @@ class Index extends Component {
     render() {
       return (
         <div>
-          <h3 align="center">Expense List</h3>
+          <h3 align="center">Expense Tracker</h3>
           <table>
             <thead>
               <tr>
