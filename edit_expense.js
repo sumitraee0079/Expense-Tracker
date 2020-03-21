@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class Edit extends Component {
+class EditExpense extends Component {
   constructor(props) {
     super(props);
     this.onChangeExpenseTitle = this.onChangeExpenseTitle.bind(this);
@@ -19,7 +19,7 @@ export default class Edit extends Component {
   }
 
   componentDidMount() {
-      axios.get('http://localhost:4000/edit_expense')
+      axios.get('http://localhost:3000/edit_expense')
           .then(response => {
               this.setState({
                 ExpenseTitle: response.data.ExpenseTitle,
@@ -29,36 +29,35 @@ export default class Edit extends Component {
           })
 
 
-  onChangePersonName(e) {
+  onChangeExpenseTitle(e) {
     this.setState({
       ExpenseTitle: e.target.value
     });
   }
-  onChangeBusinessName(e) {
+  onChangedescription(e) {
     this.setState({
       description: e.target.value
     })
   }
-  onChangeGstNumber(e) {
+  onChangeamount(e) {
     this.setState({
       amount: e.target.value
     })
   }
-  onChangeGstNumber(e) {
+  onChangedate(e) {
     this.setState({
       date: e.target.value
     })
   }
 
   onSubmit(e) {
-    e.preventDefault();
     const obj = {
       ExpenseTitle: this.state.ExpenseTitle,
       descrition: this.state.descrition,
       amount: this.state.amount,
       date: this.state.date,
     };
-    axios.post('http://localhost:4000/update_expense/')
+    axios.post('http://localhost:3000/update_expense/')
         .then(res => console.log(res.data));
   }
 
@@ -71,8 +70,8 @@ export default class Edit extends Component {
                     <label>Expense Title:  </label>
                     <input
                       type="text"
-                      value={this.state.expenseTitle}
-                      onChange={this.onChangeexpenseTitle}
+                      value={this.state.ExpenseTitle}
+                      onChange={this.onChangeExpenseTitle}
                       />
                 </div>
                 <div>
@@ -105,3 +104,5 @@ export default class Edit extends Component {
     )
   }
 }
+
+export default EditExpense
