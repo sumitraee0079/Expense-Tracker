@@ -1,5 +1,3 @@
-export * from './RegisterPage';
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -80,3 +78,5 @@ function mapState(state) {
     const { register } = state.registration;
     return { register };
 }
+
+export default RegisterPage 
