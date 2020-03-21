@@ -66,7 +66,7 @@ class ExpenseList extends React.Component {
                   <td>{expense.amount}</td>
                   <td>{expense.date}</td>
                   <td>
-                   <input type="submit" onClick={() => this.deleteExpense(expense.ExpenseTitle)}>Delete</Button>
+                   <input type="submit" onClick={() => this.deleteExpense(expense.ExpenseTitle)}>Delete Expense</Button>
                   </td>
                 </tr>
               ))}
