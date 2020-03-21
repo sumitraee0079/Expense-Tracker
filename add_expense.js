@@ -30,7 +30,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3000`)
+    axios.get(`http://localhost:3000/`)
       .then(res => {
         const expense = res.data;
         this.setState({ expense });
@@ -57,13 +57,13 @@ class App extends React.Component {
     <div>
        <form onSubmit={this.onSubmit}>
        <label>Expense Title: </label>
-        <input type="text" name="title" onChange={this.handleExpenseTitle}/>
+        <input type="text" name="title" onChange={this.handleExpenseTitleChange}/>
         <label>Description</label>
-        <input type="text" name="desc" onChange={this.handledescription}/>
+        <input type="text" name="desc" onChange={this.handledescriptionChange}/>
         <label>Amount</label>
-        <input type="text" name="amount" onChange={this.handleamount}/>
+        <input type="text" name="amount" onChange={this.handleamountChange}/>
         <label>Date</label>
-        <input type="text" name="date" onChange={this.handledate}/>
+        <input type="text" name="date" onChange={this.handledateChange}/>
         <input type="submit" value="Add Expense" />
       </form>
     </div>
