@@ -1,4 +1,4 @@
-export * from './LoginPage';
+
 
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -64,3 +64,5 @@ function mapState(state) {
   const { loggingIn } = state.authentication;
   return { loggingIn };
 }
+
+export default LoginPage
