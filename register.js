@@ -66,7 +66,7 @@ class RegisterPage extends React.Component {
                     <div>
                         <input type="button" value="Register">
                         {register}
-                        <Link to="/login">Cancel</Link>
+                        <Link to="/LoginPage">Cancel</Link>
                     </div>
                 </form>
             </div>
