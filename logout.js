@@ -7,7 +7,7 @@ class Logout extends Component {
   };
 
   logout = () => {
-    localStorage.clear("token");
+    localStorage.clear("userName");
     this.setState({ navigate: true});
   } ;
   render()
@@ -15,7 +15,7 @@ class Logout extends Component {
     const { navigate } = this.state;
 
     if (navigate) {
-      return <Redirect to="/" push={true} />;
+      return <Redirect to="/Login" push={true} />;
     }
 
     return <Button onclick={this.logout}>Log Out</Button>;
