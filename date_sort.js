@@ -49,13 +49,7 @@ class App extends React.Component {
                         console.log(date);
                         this.setState({ date: date, selectedDate: formatDate(date) });
                     }}
-                    ids={
-                        {
-                            year: 'select-year',
-                            month: 'select-month',
-                            day: 'select-day'
-                        }
-                    }
+             
                     names={
                         {
                             year: 'year',
