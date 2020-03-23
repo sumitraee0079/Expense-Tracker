@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, Button } from 'react-bootstrap';
-import Dropdown from 'react-dropdown';
+import { Dropdown } from '@progress/kendo-react-dropdowns';
 
 class ExpenseList extends React.Component {
   constructor(props) {
