@@ -1,78 +1,87 @@
-import React from 'react';
-import DropdownDate from 'react-dropdown-date';
+import React, { Component } from 'react';
 
-const formatDate = (date) => {
-    var d = new Date(date),
-        month = '' + (d.getMonth() + 1),
-        day = '' + d.getDate(),
-        year = d.getFullYear();
+import { YearPicker, MonthPicker, DayPicker } from 'react-dropdown-date';
 
-    if (month.length < 2) month = '0' + month;
-    if (day.length < 2) day = '0' + day;
-
-    return [year, month, day].join('-');
-}
-
-class App extends React.Component {
+class App extends Component {
     constructor(props) {
         super(props);
-        this.state = { date: null, selectedDate: '2012-11-15' };
+        this.state = { year: null, month: null, day: null };
     }
 
     render() {
         return (
             <div>
-
-                <DropdownDate
-                    startDate={
-                        '2012-01-01'
-                    }
-                    endDate={
-                        '2012-12-31'
-                    }
-                    selectedDate={
-                        this.state.selectedDate
-                    }
-                    order={
-                        ['year', 'month', 'day']
-                    }
-                    onMonthChange={(month) => {
-                        console.log(month);
-                    }}
-                    onDayChange={(day) => {
-                        console.log(day);
-                    }}
-                    onYearChange={(year) => {
+                <YearPicker
+                    defaultValue={'select year'}
+                   
+                    start={2012}
+                   
+                    end={2020}
+                    
+                    reverse
+                   
+                    required={true}
+                   
+                    disabled={true}
+                    
+                    value={this.state.year}
+                    
+                    onChange={(year) => {
+                        this.setState({ year });
                         console.log(year);
                     }}
-                    onDateChange={(date) => {
-                        console.log(date);
-                        this.setState({ date: date, selectedDate: formatDate(date) });
-                    }}
-             
-                    names={
-                        {
-                            year: 'year',
-                            month: 'month',
-                            day: 'day'
-                        }
-                    }
-
+                    id={'year'}
+                    name={'year'}
+                    classes={'classes'}
+                    optionClasses={'option classes'}
+                />
+                <MonthPicker
+                    defaultValue={'select month'}
+                    numeric
+                    short
+                    caps
+                    endYearGiven
                     
-                    defaultValues={
-                        {
-                            year: 'select year',
-                            month: 'select month',
-                            day: 'select day'
-                        }
-                    }
-                    options={
-                        {
-                            yearReverse: true,
-                            monthShort: true,
-                            monthCaps: true
-                        }
-                    }
+                    year={this.state.year}
+                    
+                    required={true}
+                  
+                    disabled={true}
+                   
+                    value={this.state.month}
+                    
+                    onChange={(month) => {
+                        this.setState({ month });
+                        console.log(month);
+                    }}
+                    id={'month'}
+                    name={'month'}
+                    classes={'classes'}
+                    optionClasses={'option classes'}
+                />
+                <DayPicker
+                    defaultValue={'select day'}
+                    // mandatory
+                    year={this.state.year}
+                   
+                    month={this.state.month}
+                   
+                    endYearGiven
+                    
+                    required={true}
+                    
+                    disabled={true}
+                    
+                    value={this.state.day}
+                   
+                    onChange={(day) => {
+                        this.setState({ day });
+                        console.log(day);
+                    }}
+                    id={'day'}
+                    name={'day'}
+                    classes={'classes'}
+                    optionClasses={'option classes'}
                 />
             </div>
         );
