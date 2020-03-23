@@ -13,7 +13,7 @@ class ExpenseList extends React.Component {
 
   componentDidMount() {
 
-    fetch(`http://localhost/8000/`)
+    fetch(`http://localhost/8000/table_expense`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -34,7 +34,7 @@ class ExpenseList extends React.Component {
       body: formData
     }
 
-    fetch("http://localhost/8000/table_expense")
+    fetch("http://localhost/8000/delete_expense")
       .then(res => res.json())
       .then(
         (result) => {
