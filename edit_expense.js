@@ -19,7 +19,7 @@ class EditExpense extends Component {
   }
 
   componentDidMount() {
-      axios.get('http://localhost:8000/')
+      axios.get('http://localhost:8000/edit_expense')
           .then(response => {
               this.setState({
                 ExpenseTitle: response.data.ExpenseTitle,
@@ -57,7 +57,7 @@ class EditExpense extends Component {
       amount: this.state.amount,
       date: this.state.date,
     };
-    axios.post('http://localhost:8000/')
+    axios.post('http://localhost:8000/update_expense')
         .then(res => console.log(res.data));
   }
 
