@@ -61,7 +61,7 @@ class App extends Component {
                 />
                 <DayPicker
                     defaultValue={'select day'}
-                    // mandatory
+                   
                     year={this.state.year}
                    
                     month={this.state.month}
