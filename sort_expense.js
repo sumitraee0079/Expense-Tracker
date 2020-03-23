@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { DropDownList } from '@progress/kendo-react-dropdowns';
+import { DropDownList } from 'react-dropdowns';
 
     class Expense extends Component {
 
