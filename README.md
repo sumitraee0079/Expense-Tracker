@@ -9,7 +9,7 @@
  2. Structure
  App
    
-   |___ Form _ _ _ _ RecordsAPI(Login/Signup)
+   |___ Form _ _ _ _ Login/Signup
    |                    |
    |___ Table           |
            |_______ TableRow
