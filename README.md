@@ -3,7 +3,7 @@
 1. About
 - An expense tracking application by creating form and using CRUD with React.
 - How to run?
-  pull it, and run yarn install and yarn start
+  pull it, and run npm install and npm start
   
  
  2. Structure
@@ -28,7 +28,6 @@
               |___ register.js
               |___ table_expense.js
               |___ server.js
-              |___ index_components.js
               |___ search_title.js
               |___ sort_expense.js
               |___ sort_date.js
