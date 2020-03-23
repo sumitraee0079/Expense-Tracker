@@ -1,6 +1,6 @@
 import React from 'react';
 import { Table, Button } from 'react-bootstrap';
-import { Dropdown } from '@progress/kendo-react-dropdowns';
+import { Dropdown } from 'react-dropdown';
 
 class ExpenseList extends React.Component {
   constructor(props) {
@@ -13,7 +13,7 @@ class ExpenseList extends React.Component {
 
   componentDidMount() {
 
-    fetch(`http://localhost/3000/expense_tracker`)
+    fetch(`http://localhost/8000/`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -34,7 +34,7 @@ class ExpenseList extends React.Component {
       body: formData
     }
 
-    fetch("http://localhost/3000/delete_expense")
+    fetch("http://localhost/8000/")
       .then(res => res.json())
       .then(
         (result) => {
