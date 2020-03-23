@@ -30,7 +30,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:3000/`)
+    axios.get(`http://localhost:8000/`)
       .then(res => {
         const expense = res.data;
         this.setState({ expense });
@@ -45,7 +45,7 @@ class App extends React.Component {
         date: this.state.date
       }
 
-      axios.post('http://localhost:3000', title)
+      axios.post('http://localhost:8000', title)
       .then(res => {
           const expense = res.data;
           this.setState({ expense });
