@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import { YearPicker, MonthPicker, DayPicker } from 'react-dropdown-date';
 
-class App extends Component {
+class SortDate extends Component {
     constructor(props) {
         super(props);
         this.state = { year: null, month: null, day: null };
@@ -88,4 +88,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default SortDate;
