@@ -1,11 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 class LoginPage extends React.Component {
   constructor(props) {
       super(props);
-
-      this.props.logout();
+	
 
       this.state = {
           username: '',
@@ -22,12 +20,12 @@ class LoginPage extends React.Component {
       this.setState({ [name]: value });
   }
 
+handleSubmit(e) {
+        e.preventDefault();
+
 
       this.setState({ isAdmin: true });
       const { username, password } = this.state;
-      if (username && password) {
-          this.props.login(username, password);
-      }
   }
 
   render() {
@@ -39,27 +37,24 @@ class LoginPage extends React.Component {
               <form name="form" onSubmit={this.handleSubmit}>
                   <div>
                       <label name="username">Username</label>
-                      <input type="text" name="username" value={username} onChange={this.handleChange} required/>
+                      <input type="text" name="username" value={username} onChange={this.handleChange} />
+			{ isAdmin && !username && <div>Username is required</div>
+			}
                   </div>
                   <div>
                       <label name="password">Password</label>
-                      <input type="password" name="password" value={password} onChange={this.handleChange} required/>
+                      <input type="password" name="password" value={password} onChange={this.handleChange} />
+			{ isAdmin && !password && <div>Password is required</div>}
                   </div>
                   <div>
-                      <input type="submit" value="Login">
+                      <input type="submit" value="Login"></input>
                       {loggingIn}
-                      <Link to="/register">Register</Link>
                   </div>
               </form>
           </div>
       );
 
   }
-}
-
-function mapState(state) {
-  const { loggingIn } = state.authentication;
-  return { loggingIn };
 }
 
 export default LoginPage
