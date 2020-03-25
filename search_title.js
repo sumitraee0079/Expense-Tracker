@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class App extends Component {
+class SearchTitle extends Component {
 
     state = {
         Expense_Title = '',
@@ -46,4 +46,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default SearchTitle;
