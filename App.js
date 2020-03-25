@@ -1,26 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-import LoginPage from './login';
-import Logout from './logout';
-import RegisterPage from './register.js';
-import AddExpense from './add_expense';
-import EditExpense from './edit_expense';
-import SortExpense from './sort_expense';
-import SearchTitle from './search_title';
-import SortDate from './sort_date';
-
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <AddExpense />
-        <EditExpense />
-        <SortExpense />
-        <SearchTitle />
-        <SortDate />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
 
 export default App;
