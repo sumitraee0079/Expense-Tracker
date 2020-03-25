@@ -7,6 +7,7 @@ import AddExpense from './add_expense';
 import EditExpense from './edit_expense';
 import SortDate from './sort_date';
 import SortExpense from './sort_expense';
+import SearchTitle from './search_title';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
         <EditExpense />
         <SortDate />
         <SortExpense />
+        <SearchTitle />
       
       </div>
     );
