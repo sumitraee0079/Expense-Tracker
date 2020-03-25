@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { YearPicker, MonthPicker, DayPicker } from 'react-dropdown-date';
+import { Button } from 'react-bootstrap';
+import { Dropdown } from 'react-dropdown';
+import { Redirect } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
