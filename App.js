@@ -1,30 +1,33 @@
 import React, { Component } from 'react';
 import './App.css';
+import { YearPicker, MonthPicker, DayPicker } from 'react-dropdown-date';
+import { Button } from 'react-bootstrap';
+import { Dropdown } from 'react-dropdown';
+import { Redirect } from "react-router-dom";
+
 import LoginPage from './login';
-import Logout from './logout';
-import RegisterPage from './register';
-import AddExpense from './add_expense';
-import EditExpense from './edit_expense';
-import SortDate from './sort_date';
-import SortExpense from './sort_expense';
-import SearchTitle from './search_title';
+import Logout from './homepage';
+import SortExpense from './homepage';
+import SearchTitle from './homepage';
 
 class App extends Component {
   render() {
+	const titles =
+    [
+        "Mobile",
+        "Laptop",
+        "Pen",
+        "Pencil"
+    ];
+
     return (
       <div className="App">
         <LoginPage />
-        <Logout />
-        <RegisterPage />
-        <AddExpense />
-        <EditExpense />
-        <SortDate />
-        <SortExpense />
-        <SearchTitle />
-      
-      </div>
-    );
-  }
+	<Logout />
+	<SortExpense />
+	<SearchTitle content = {titles}/>
+	</div>
+);
 }
-
+}
 export default App;
