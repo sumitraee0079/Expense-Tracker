@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ExpenseList from './table_expense';
 
 class EditExpense extends Component {
   constructor(props) {
