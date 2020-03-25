@@ -5,7 +5,7 @@ import { Button } from 'react-bootstrap';
 import { YearPicker, MonthPicker, DayPicker } from 'react-dropdown-date';
 import { Redirect } from "react-router-dom";
 
-/*class Logout extends Component {
+export default class Logout extends Component {
   state: {
     navigate: false
   };
@@ -24,12 +24,12 @@ import { Redirect } from "react-router-dom";
 	return <Button onclick={this.logout}>Log Out</Button>;
 
   }
-}*/
+}
 
 
 
 
-/*    class SortExpense extends Component {
+export default class SortExpense extends Component {
 
       constructor(props) {
         super(props)
@@ -71,7 +71,7 @@ import { Redirect } from "react-router-dom";
         )
       }
     }
-*/
+
 
 export default class SearchTitle extends React.Component {
     state = {
