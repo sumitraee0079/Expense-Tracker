@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { DropDown } from 'react-dropdown';
 
-    class Expense extends Component {
+    class SortExpense extends Component {
 
       constructor(props) {
         super(props)
@@ -46,4 +46,4 @@ import { DropDown } from 'react-dropdown';
         )
       }
     }
-    export default Expense
+    export default SortExpense
