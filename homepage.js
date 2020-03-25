@@ -5,13 +5,13 @@ import { Button } from 'react-bootstrap';
 import { YearPicker, MonthPicker, DayPicker } from 'react-dropdown-date';
 import { Redirect } from "react-router-dom";
 
-export default class Logout extends Component {
+class Logout extends Component {
   state: {
     navigate: false
   };
 
   logout = () => {
-    localStorage.clear("token");
+    localStorage.clear("username");
     this.setState({ navigate: true});
   } ;
   render()
@@ -73,7 +73,7 @@ export default class SortExpense extends Component {
     }
 
 
-export default class SearchTitle extends React.Component {
+class SearchTitle extends React.Component {
     state = {
         initialItems: [],
         items: []
