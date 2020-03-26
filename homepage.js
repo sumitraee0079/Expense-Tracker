@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import expenses from './expense_tracker.json'
+import expenses from './App';
 import { DropDown } from 'react-dropdown';
 import { Button } from 'react-bootstrap';
 import { YearPicker, MonthPicker, DayPicker } from 'react-dropdown-date';
 import { Redirect } from "react-router-dom";
 
-class Logout extends Component {
+/*class Logout extends Component {
   state: {
     navigate: false
   };
 
   logout = () => {
-    localStorage.clear("username");
+    localStorage.clear("token");
     this.setState({ navigate: true});
   } ;
   render()
@@ -24,7 +24,7 @@ class Logout extends Component {
 	return <Button onclick={this.logout}>Log Out</Button>;
 
   }
-}
+}*/
 
 
 
@@ -49,6 +49,11 @@ export default class SortExpense extends Component {
           this.state.expenses.sort((a, b) => (b.amount - a.amount))
       });
       }
+	componentWillMount = () => {
+      	this.setState({
+         expenses: this.props.content
+      })
+    }	
 
       render() {
         return (
@@ -59,10 +64,12 @@ export default class SortExpense extends Component {
             <button onClick={this.sortByPriceDesc}>
             Sort from High to Low
             </button>
-            <div classname="Expense">
+            <div classname="SortExpense">
                   { this.state.expenses.map((expense, index) =>
                     <div key ={index}>
-                    <th>Amount: { expense.amount }
+                    <th>Amount: <select id = "prices">
+				<option>{ expense.amount } </option>
+			</select>
                     </th>
                     </div>
           )}
@@ -72,8 +79,7 @@ export default class SortExpense extends Component {
       }
     }
 
-
-class SearchTitle extends React.Component {
+/*export default class SearchTitle extends React.Component {
     state = {
         initialItems: [],
         items: []
@@ -110,4 +116,4 @@ class SearchTitle extends React.Component {
         </div>
       );
     }
-};
+};*/
