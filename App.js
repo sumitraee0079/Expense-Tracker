@@ -9,6 +9,7 @@ import LoginPage from './login';
 import Logout from './homepage';
 import SortExpense from './homepage';
 import SearchTitle from './homepage';
+import ExpenseManager from './expense_manager';
 
 class App extends Component {
   render() {
@@ -26,6 +27,7 @@ class App extends Component {
 	<Logout />
 	<SortExpense />
 	<SearchTitle content = {titles}/>
+	<ExpenseManager />
 	</div>
 );
 }
