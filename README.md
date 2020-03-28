@@ -14,32 +14,28 @@
    |___ Table           |
            |_______ TableRow
                         |____ TableDisplay
-                        |____ TableEdit/TableInsert
+                        |____ TableEdit/TableInsert/TableDelete
                         
   FIle Structure:
     |__node_modules
 
 |
 |__ src
-     |
-     |___ components:
               |___ login.js
               |___ logout.js
               |___ register.js
-              |___ table_expense.js
-              |___ server.js
+              |___ Table.js
               |___ search_title.js
               |___ sort_expense.js
-              |___ sort_date.js
               |___ add_expense.js
               |___ edit_expense.js
-              
-
-3. Ajax Requests
-a) Ajax Libraries
-      - Axios
-b) Browser built-in window.fetch
-No need to prepend "window" before fetch, this is the default obj
+              |___ App.css
+              |___ App.test.js
+              |___ form1.js
+              |___ index.css
+              |___ index.js
+              |___ navbar.js
+              |___ serviceWorker.js
 
 
 
